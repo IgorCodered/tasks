@@ -1,5 +1,8 @@
 plugins {
-    kotlin("jvm") version "2.2.20"
+    kotlin("jvm") version "2.1.21"
+    kotlin("plugin.spring") version "1.9.22"
+    id("org.springframework.boot") version "3.2.2"
+    id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "org.elesin"
@@ -10,9 +13,11 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
-}
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+    implementation("org.jetbrains.kotlin:kotlin-reflect")
 
-tasks.test {
-    useJUnitPlatform()
+    runtimeOnly("com.h2database:h2") // или ваша БД
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
