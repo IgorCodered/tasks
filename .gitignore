@@ -177,3 +177,9 @@ tmp/
 # Visual Studio Code
 .vscode/settings.json
 ```
+/learning/CoroutinesGuide.kt
+/learning/ExtensionsAndScopes.kt
+/learning/ExtensionsAndScopes.md
+/learning/NullSafetyGuide.kt
+/learning/NullSafetyGuide.md
+/learning/
